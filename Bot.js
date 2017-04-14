@@ -4,7 +4,6 @@ const Cleverbot = require("cleverbot.io");
 const CleverBotClient = new Cleverbot('S9rvxDoBzlA1khRT','e5Tt0nRm9gohdu2tiSDDLHbdDIrvvHDa');
 const config = require('./config.json');
 const adminfile = config.adminfile;
-//removed the constant for the token, if it's only used once, there's no need to use a constant/variable
 const prefix = config.prefix;
 
 
@@ -19,17 +18,8 @@ if(message.author === client.user) return;
 var args = message.content.split(" ").slice(1).join(" ");
 
 if(message.content.startsWith(client.user)){
-  CleverBotClient.setNick("Bendy");
-  CleverBotClient.create(function (err, session){
-  console.log("CreatED/ing CleverBotClient! function> | session: "+ session);
+ //add all your clever bot command stuff in here, but please don't copy/paste, it makes everything so messy and it's hard to work with 
+}
 });
-
-{0
-          message.channel.startTyping();
-    CleverBotClient.ask(args, function (err, response) {
-        message.reply(response);
-              message.channel.stopTyping();
-      });
-    }}});
 
 client.login(config.token);
