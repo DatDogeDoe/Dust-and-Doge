@@ -14,14 +14,12 @@ client.on('ready', () => {
   client.user.setStatus('online');
 });
 
-client.on('message', message =>{
-  if(message.author === client.user) return;
-});
-client.on("message", function(message) {
-  var BotMention = "@<302444220344696833>" //The Mention for the Bot
-  var args = message.content.split(" ").slice(1).join(" ") //Args are used to see what the User said to the bot
-if(message.content.includes(BotMention)) { 
-CleverBotClient.setNick("Joringa");
+client.on("message", message => {
+if(message.author === client.user) return;
+var args = message.content.split(" ").slice(1).join(" ");
+
+if(message.content.startsWith(client.user)) { 
+CleverBotClient.setNick("Bendy");
 CleverBotClient.create(function (err, session){
     console.log("CreatED/ing CleverBotClient! function> | session: "+ session);
 })
