@@ -18,10 +18,11 @@ client.on("message", message => {
 if(message.author === client.user) return;
 var args = message.content.split(" ").slice(1).join(" ");
 
-if(message.content.startsWith(client.user)) { 
-CleverBotClient.setNick("Bendy");
-CleverBotClient.create(function (err, session){
-    console.log("CreatED/ing CleverBotClient! function> | session: "+ session);
+if(message.content.startsWith(client.user)){
+  CleverBotClient.setNick("Bendy");
+  CleverBotClient.create(function (err, session){
+  console.log("CreatED/ing CleverBotClient! function> | session: "+ session);
+}
 });
 
 {0
